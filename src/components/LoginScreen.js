@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button, ToastAndroid, Image } from 'react-native';
+import firebase from 'firebase';
 import TextInputComponent from './TextInputComponent';
 
 export default class LoginScreen extends Component{
@@ -8,17 +9,42 @@ export default class LoginScreen extends Component{
     	header: null,
   	};
 
+  	onButtonPress(){
+
+  		ToastAndroid.show("login button pressed", ToastAndroid.SHORT);
+
+		/*this.setState({ error : '', loading : true})
+
+		firebase.auth().signInWithEmailAndPassword( email, password)
+			.catch( () => {
+
+				firebase.auth().createUserWithEmailAndPassword(email, password)
+					.catch( () => {
+						this.setState({ error : "Authentication failed"});
+					});
+
+			});
+		*/
+
+
+	}
+
+
 	render(){
 		const { navigate} = this.props.navigation;
 
 		return (
 
 			<View style={{ justifyContent: 'center', flex:1, backgroundColor: 'white'}}>
+				
 				<View style={ styles.cardViewContainer }>
+				
 					<View style={styles.container}>
+				
 						<View style={{ alignItems: 'center'}}>
 							<Text style={styles.loginTextStyle}>LogIn Form</Text>
 						</View>
+				
 						<TextInputComponent TextHint="Enter your email" titleText="Email"/>
 						<TextInputComponent TextHint="Enter your password" titleText="Password"/>
 						<View style={{ margin: 10, padding:10}}>
@@ -27,8 +53,11 @@ export default class LoginScreen extends Component{
 								onPress={() => navigate('list')}
 							/>
 						</View>
+				
 					</View>
-				</View>	
+				
+				</View>
+
 			</View>	
 		);
 	}

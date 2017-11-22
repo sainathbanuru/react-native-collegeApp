@@ -4,25 +4,31 @@ import ListComponent from './ListComponent'
 
 
 const data = [
-  {id : 1, title: "Attendance", color: "grey", desc: "Here you can find the details of your Attendance "},
-  {id : 2, title: "Course Details", color: "green", desc: "Find details about your registration"},
-  {id : 3, title: "Notices", color: "steelblue", desc: "Any Notices?"},
-  {id : 4, title: "Results", color: "red", desc:"Results of the exams "},
-  {id : 5, title: "Events", color: "blue", desc:"Events happening in the college"},
-  {id : 6, title: "TimeTable", color: "black", desc: "Your daily class schedule"},
+  {id : 1, title: "Attendance", color: "steelblue", desc: "Here you can find the details of your Attendance ", img: require('../images/attendance_white.png')},
+  {id : 2, title: "Course Details", color: "#7B1FA2", desc: "Find details about your registration", img: require('../images/examperfo_dashboard.png')},
+  {id : 3, title: "Results", color: "#512DA8", desc:"Results of the exams ", img: require('../images/results_dashboard.png')},
+  {id : 4, title: "Notices", color: "#009688", desc: "Any Notices?", img: require('../images/ic_notification_white.png')},
+  {id : 5, title: "Events", color: "#00838F", desc:"Events happening in the college", img: require('../images/timeline_dashboard.png')},
+  {id : 6, title: "TimeTable", color: "#689F38", desc: "Your daily class schedule", img: require('../images/schedule_dashboard.png')},
 ]
 
 export default class Main extends Component{
 	
 	static navigationOptions = {
 
-    	title: 'Dashboard',
+    	title: 'Home',
+    	headerLeft: null,
     	headerTintColor: 'white',
 	    headerStyle: {
 	      height: 60,
-	      backgroundColor: 'steelblue'
+	      backgroundColor: 'steelblue',
 	    
 	    },
+	    headerTitleStyle : {
+	    	fontSize: 24
+	    },
+	    
+
   	};
 
 	constructor() {
