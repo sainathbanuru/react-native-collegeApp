@@ -16,6 +16,7 @@ export default class EventsComponent extends Component{
 
 	render(){
 		return(
+			
 			<ScrollView>
 
 				<Card>
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
 
 	dateContainerStyle: {
 
-		backgroundColor: '#B71C1C',
+		backgroundColor: '#006064',
 		borderRadius:5,
 		marginRight:2,
 		marginLeft:2,

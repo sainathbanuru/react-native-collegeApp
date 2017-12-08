@@ -35,6 +35,10 @@ export default class ListComponent extends Component{
 			case 6:
 				navigate('timetable');
 				break;	
+
+			case 7:
+				navigate('request');
+				break;	
    		}
 	 
 	}
@@ -47,7 +51,7 @@ export default class ListComponent extends Component{
 			return(
 				
 				<TouchableNativeFeedback onPress={this.GetItem.bind(this, item)}>
-					<View  style={[styles.rowStyles, {backgroundColor: item.color, flexDirection: 'row', alignItems : 'center', flex:1}]}>
+					<View  style={[styles.rowStyles, {backgroundColor: item.color, flexDirection: 'row',borderRadius:5, alignItems : 'center', flex:1}]}>
 
 						<View style={{ flex: 3, justifyContent: 'flex-start'}}>
 
@@ -56,9 +60,12 @@ export default class ListComponent extends Component{
 						</View>
 
 						<View style={{ flex: 5, justifyContent: 'flex-end', margin: 15}}>
+							
 							<Text style={styles.textStyle}> { item.title }</Text>
 							<Text style={styles.descStyle}> { item.desc }</Text>
+						
 						</View>
+					
 					</View>	
 				</TouchableNativeFeedback>	
 			
@@ -70,7 +77,7 @@ export default class ListComponent extends Component{
 			return(
 
 				<TouchableNativeFeedback onPress={this.GetItem.bind(this, item)}>
-					<View  style={[styles.rowStyles, {backgroundColor: item.color, flexDirection: 'row', alignItems : 'center', flex:1}]}>
+					<View  style={[styles.rowStyles, {backgroundColor: item.color, flexDirection: 'row',borderRadius:5, alignItems : 'center', flex:1}]}>
 
 						<View style={{ flex: 5, justifyContent: 'flex-end', margin:10}}>
 							<Text style={styles.textStyle}> { item.title }</Text>

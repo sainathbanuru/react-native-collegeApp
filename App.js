@@ -13,6 +13,7 @@ import CourseComponent from './src/components/CourseComponent';
 import NoticesComponent from './src/components/NoticesComponent';
 import EventsComponent from './src/components/EventsComponent';
 import TimetableComponent from './src/components/TimetableComponent';
+import RequestFormComponent from './src/components/RequestFormComponent';
 
 
 export const SimpleApp = StackNavigator({
@@ -25,7 +26,8 @@ export const SimpleApp = StackNavigator({
   course : { screen : CourseComponent},
   notices: { screen : NoticesComponent},
   events: { screen : EventsComponent},
-  timetable: { screen : TimetableComponent}
+  timetable: { screen : TimetableComponent},
+  request: { screen : RequestFormComponent}
 
 });
 
